@@ -1,0 +1,22 @@
+[project]
+name = "easycut"
+version = "2.0.0"
+description = "Fábrica de cortes verticais com legendas karaokê (Qt/PySide6 + FFmpeg + Whisper local opcional)"
+requires-python = ">=3.10"
+dependencies = ["PySide6>=6.5"]
+
+[project.optional-dependencies]
+# Escolha UM back-end de Whisper (todos opcionais):
+whisper = ["faster-whisper>=1.0"]
+whisper-openai = ["openai-whisper"]
+whisper-mac = ["mlx-whisper; sys_platform == 'darwin' and platform_machine == 'arm64'"]
+
+[project.gui-scripts]
+easycut = "easycut.app:main"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["easycut*"]
