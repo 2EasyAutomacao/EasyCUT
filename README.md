@@ -66,5 +66,5 @@ easycut/
   core/       # sem Qt: modelos, geração do .ass, comandos ffmpeg, Whisper, CSV
   ui/         # janela, prévia interativa, painéis e tarefas em segundo plano
 Assets/       # logo e fonte padrão (Bazinga)
-Easycut.py    # script antigo de linha de comando (Windows), mantido como referência
+easycut/EasyCutCLI.py    # script antigo de linha de comando (Windows), mantido como referência
 ```
